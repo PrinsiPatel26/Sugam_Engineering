@@ -78,6 +78,11 @@ export function Footer() {
             <p className={columnTitle}>Company</p>
             <ul className="mt-4 space-y-2.5">
               <li>
+                <Link to="/about" className={linkClass}>
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/manufacturing" className={linkClass}>
                   Manufacturing
                 </Link>
