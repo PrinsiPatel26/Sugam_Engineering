@@ -1,0 +1,14 @@
+export function slugify(value: string): string {
+  return value.
+  toLowerCase().
+  replace(/&/g, ' and ').
+  replace(/[^a-z0-9]+/g, '-').
+  replace(/^-+|-+$/g, '');
+}
+
+export function titleCase(value: string): string {
+  return value.
+  split(' ').
+  map((word) => word.length > 3 ? word[0].toUpperCase() + word.slice(1) : word.toUpperCase()).
+  join(' ');
+}
