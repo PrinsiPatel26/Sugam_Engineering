@@ -12,7 +12,6 @@ import { generalInquiryMessage, telHref, whatsappUrl } from '../../utils/inquiry
 import { useInquiry } from '../../contexts/InquiryContext';
 
 const companyLinks = [
-{ label: 'About Us', to: '/about', description: 'Company profile and product range' },
 { label: 'Manufacturing', to: '/manufacturing', description: 'Process, machining and finishing' },
 { label: 'Infrastructure', to: '/infrastructure', description: 'Plant, machinery and dispatch' },
 { label: 'Quality', to: '/quality', description: 'Inspection and dimensional control' }];
