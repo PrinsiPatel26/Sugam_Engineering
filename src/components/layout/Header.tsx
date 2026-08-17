@@ -12,7 +12,6 @@ import { generalInquiryMessage, telHref, whatsappUrl } from '../../utils/inquiry
 import { useInquiry } from '../../contexts/InquiryContext';
 
 const companyLinks = [
-{ label: 'About Us', to: '/about', description: 'Company profile and product range' },
 { label: 'Manufacturing', to: '/manufacturing', description: 'Process, machining and finishing' },
 { label: 'Infrastructure', to: '/infrastructure', description: 'Plant, machinery and dispatch' },
 { label: 'Quality', to: '/quality', description: 'Inspection and dimensional control' }];
@@ -107,6 +106,10 @@ export function Header() {
               onOpen={() => setMenu('vehicles')} />
             
             <MegaTrigger label="Company" active={menu === 'company'} onOpen={() => setMenu('company')} />
+
+            <NavLink to="/about" className={navLinkClass}>
+              About Us
+            </NavLink>
 
             <NavLink to="/quality" className={navLinkClass}>
               Quality
@@ -510,6 +513,11 @@ function MobileMenu({ open, onClose }: {open: boolean;onClose: () => void;}) {
                     </Link>
                   </li>
               )}
+                <li>
+                  <Link to="/about" onClick={onClose} className="block py-3 uppercase tracking-[0.1em] text-white">
+                    About Us
+                  </Link>
+                </li>
                 <li>
                   <Link to="/contact" onClick={onClose} className="block py-3 uppercase tracking-[0.1em] text-white">
                     Contact
